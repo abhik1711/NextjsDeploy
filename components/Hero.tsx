@@ -1,10 +1,17 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import { FaFileAlt } from "react-icons/fa"; // Import an icon for Resume/CV
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
+  const handleResumeClick = () => {
+    // Open CV from local storage
+    const cvUrl = "/FinalCV.pdf"; // Path to your CV file in the public directory
+    window.open(cvUrl, "_blank"); // Open CV in a new tab
+  };
+
   return (
     <div className="pb-20 pt-36">
       {/**
@@ -34,16 +41,16 @@ const Hero = () => {
       >
         {/* Radial gradient for the container to give a faded look */}
         <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
+          // change the bg to bg-black-100, so it matches the bg color and will blend in
           className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative my-20 z-10 space-x-4"> {/* Added space-x-4 for spacing */}
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
+            Innovative Web Development Portfolio 
           </p>
 
           {/**
@@ -52,21 +59,30 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
+            words="Building Sophisticated and Modern Web Experience"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+            Hi! My name is Abhinav Karade.<br></br> I'm a passionate Software Developer specializing in crafting elegant user interfaces and robust applications.
           </p>
 
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="flex space-x-4"> {/* Added space-x-4 for button spacing */}
+            <a href="#about">
+              <MagicButton
+                title="Personal Info"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a onClick={handleResumeClick} role="button" tabIndex={0}>
+              <MagicButton
+                title="Resume/CV"
+                icon={<FaFileAlt />} // Icon for Resume/CV
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

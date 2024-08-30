@@ -7,17 +7,15 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        Awards / <span className="text-purple">Achievements</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          title="Open Soft (General Championship - 2023-24) - 2nd Position"
+          icon={<AceternityIcon order="1" />}
+          des="Collaborated with a team of 10+ to build a web and mobile app movie database with advanced search and playback features."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -26,11 +24,9 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          title="Cricket (General Championship - 2023-24) - 1st Position"
+          icon={<AceternityIcon order="2" />}
+          des="Part of the Gold winning Cricket team in the General Championship Sports and Games organised by Technology Students' Gymkhana."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -48,11 +44,9 @@ const Approach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          title="Academic Excellence"
+          icon={<AceternityIcon order="3" />}
+          des="Bagged a top score of 97.2% in the CBSE Class X Examination 2019, ranking among the top two scorers in the district and secured an All India Rank amongst the top 1.5% in Joint Entrance Examination(JEE) Mains 2022 out of 1.5 million participating students. Currently Department Rank 1 holder at IIT Kharagpur."
         >
           <CanvasRevealEffect
             animationSpeed={3}
